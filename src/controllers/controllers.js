@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const { readFromFile, writeToFile } = require("../../util");
 
-const getNote = (req, res) => {
+const getNotes = (req, res) => {
   const filePath = path.join(__dirname, "../../../db/db.json");
   const notes = readFromFile(filePath);
   res.json(notes);
@@ -39,7 +39,7 @@ const createNotes = (req, res) => {
   };
 
   module.exports = {
-      getNote,
+      getNotes,
       createNotes,
       deleteNotes,
   };

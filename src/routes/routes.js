@@ -1,8 +1,15 @@
-const {router} = require(`express`)
-const apiroutes = require(`./api`)
+const { Router } = require("express");
 
-const router= router();
+const {
+  getNotes,
+  createNotes,
+  deleteNotes,
+} = require("../controllers/controllers");
 
-router.use(`/api, apiRoutes`);
+const router = Router();
+
+router.get("../controllers", getNotes);
+router.post("../controllers", createNotes);
+router.delete("../controllers", deleteNotes);
 
 module.exports = router;
