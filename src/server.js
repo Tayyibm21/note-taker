@@ -1,16 +1,15 @@
-const { router } = require (`express`);
-const{
-    getNotes,
-    createNotes,
-    deleteNotes,
-} = require(`../../controllers/api/Notes`);
+const express = require("express");
 
-const router = router();
+const routes = require("./routes");
 
-router.get(`/`, getNotes)
+const PORT = process.env.PORT || 3000;
 
-router.create(`/`, createNotes)
+const app = express();
 
-router.get(`/`, deleteNotes)
+// Middleware
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes);
 
-module.exports = router;
+app.listen(PORT, () => console.log(`Running on http://localhost:${PORT}`));
