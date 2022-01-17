@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const { renderHomepage, renderNotes } = require("../controllers/controllers");
+const { renderHomepage, renderNotes } = require("../controllers/view");
 
 const router = Router();
 
