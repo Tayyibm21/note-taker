@@ -1,16 +1,13 @@
 const path = require("path");
 
-const renderHomepage = (req, res) => {
+const renderHomePage = (req, res) => {
   const filePath = path.join(__dirname, "../../../public/index.html");
   res.sendFile(filePath);
 };
 
-const renderNotes = (req, res) => {
+const renderNotesPage = (req, res) => {
   const filePath = path.join(__dirname, "../../../public/notes.html");
   res.sendFile(filePath);
 };
 
-module.exports = {
-  renderHomepage,
-  renderNotes,
-};
+module.exports = { renderHomePage, renderNotesPage };
