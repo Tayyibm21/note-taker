@@ -9,4 +9,4 @@ It is also not deployed on heroku but instead it is deployed on github pages.
 # Links
 Repp Link: https://github.com/Tayyibm21/note-taker/tree/dev
 
-Deployed Link: 
+Video walkthrough: https://drive.google.com/file/d/1zN6vK4jDTn4WTuriAT-OjqHbH6NFOVlo/view
